@@ -23,6 +23,12 @@
 # PYTHON
 '.source.python':
   # fundamentals
+  'print':
+    'prefix': 'print'
+    'body': 'print($1)$2'
+  'split':
+    'prefix': 'split'
+    'body': 'split($1)'
   'exception':
     'prefix': 'except'
     'body': '''
