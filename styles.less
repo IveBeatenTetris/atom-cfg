@@ -1,0 +1,188 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+/* mini map */
+atom-text-editor atom-text-editor-minimap.absolute.left, html atom-text-editor-minimap.absolute.left{
+  background: -webkit-linear-gradient(200deg, rgb(33,37,43), rgb(25,30,35));
+  border-right:1px solid rgb(25,30,35);
+}
+
+/* code line height */
+atom-text-editor .line{
+  //line-height: 1.2em;
+}
+/* keywords */
+.syntax--storage,
+.syntax--keyword{
+  color: rgb(101, 133, 191) !important;
+  font-style: italic;
+  font-weight: bold;
+}
+/* integer */
+.syntax--constant.syntax--numeric{
+  color:rgb(236, 167, 48);
+}
+/* string */
+.syntax--string {
+  color: rgb(207, 121, 63);
+}
+/* variable */
+.syntax--variable {
+  color: rgb(255, 227, 132);
+}
+/* constant */
+.syntax--constant {
+  color: rgb(121, 85, 72);
+}
+/* parameter */
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: rgb(171, 178, 191);
+}
+/* whole function line */
+/*.syntax--python .syntax--function{
+  background-color:rgb(49, 58, 71) !important;
+}
+.syntax--python .syntax--name{
+  background-color:rgb(40, 44, 52) !important;
+}
+.syntax--function .syntax--name,{
+  background-color:rgb(49, 58, 71) !important;
+}
+.syntax--python .syntax--magic{
+  background-color:rgb(40, 44, 52) !important;
+}*/
+.syntax--python .syntax--function{
+  background-color:rgb(49, 58, 71);
+}
+.syntax--python .syntax--entity{
+  background:none;
+}
+/* whole class line */
+.syntax--python .syntax--class{
+  background-color: #313a47 !important;
+}
+
+.outline-view-core .outline-view-trees li.list-item.outline-view-item {
+  line-height: 1.7em;
+}
+.outline-view-core .list-group .selected::before, .list-tree .selected::before {
+  height: 1.7em;
+}
+.outline-view-core .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+  line-height: 1.5em;
+}
+.outline-view-core .list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+  // line-height: 1.7em;
+}
+
+/* project tree view */
+li[is="tree-view-directory"] .entries span{
+  margin-bottom:1px;
+  margin-top:1px;
+}
+.project-root-header{
+  background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
+}
+.tree-view{
+  background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
+}
+
+/* outline view */
+.outline-view-trees-scroller{}
+.outline-view ol li div.list-item{}
+
+/* status bar */
+.status-bar{
+  background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
+}
+
+/* tab bar*/
+.tab-bar{
+  background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
+}
+.close-icon{
+  background: -webkit-linear-gradient(90deg, rgb(33,37,43), rgb(25,30,35));
+}
+ul[is="atom-tabs"] li[is="tabs-tab"]{
+  //border-top-right-radius:10px !important;
+  background-color: rgb(33,37,43);
+  background: -webkit-linear-gradient(90deg, rgb(33,37,43), rgb(25,30,35));
+}
+
+/* docstring */
+.syntax--block .syntax--python,
+.syntax--block{
+  color: rgb(92, 99, 112);
+  font-style: italic;
+}
+
+.item-views{
+  background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
+}
+
+/* text editor */
+atom-text-editor{
+  //background-color: rgb(40, 44, 52);
+  background: -webkit-linear-gradient(-90deg, rgb(33,37,43), rgb(40,44,52));
+}
+
+/* github */
+.github-StagingView-header{
+  background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
+}
+.github-FilePatchListView-item{
+  padding:0px 10px;
+}
+.github-CommitView-editor .lines .highlights{
+  background-color: rgb(40, 44, 52);
+}
+
+/* title bars */
+.title{
+  font-weight:bold;
+}
+
+/* terminal */
+.terminal-pane{
+  //background:-webkit-linear-gradient(rgb(30,30,35), rgb(15,15,20));
+  background-color:rgb(20,20,20);
+}
+
+/* todo panel */
+/*.show-todo-preview .todo-table th, .show-todo-preview .todo-table td{
+  padding:0px;
+}*/
+
+.tree-view .tree-view-root {
+  padding-right:0px;
+}

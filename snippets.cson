@@ -1,0 +1,80 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+# PYTHON
+'.source.python':
+  # fundamentals
+  'exception':
+    'prefix': 'except'
+    'body': '''
+      try:
+        $2
+      except ${1:ErrorType}:
+        $3
+    '''
+  # pygo
+  'go.Boilerplate':
+    'prefix': 'boilerplate'
+    'body': '''
+      from libraries import pygo as go
+
+      # assignments
+      assets = go.AssetLoader()
+      window = go.Window()
+
+      '------------------------------------------------------------------------------'
+      $1
+      '------------------------------------------------------------------------------'
+
+      # main loop
+      while True:
+      	# events
+      	window.getEvents()
+
+      	# updating
+      	window.update()
+    '''
+
+  'go.AssetLoader()':
+    'prefix': 'assetloader'
+    'body': 'assets = go.AssetLoader($1)'
+  'go.Window()':
+    'prefix': 'window'
+    'body': 'window = go.Window($1)'
+  'go.Player()':
+    'prefix': 'player'
+    'body': 'player = go.Player({"track": player})$1'
+  'go.Camera()':
+    'prefix': 'camera'
+    'body': 'camera = go.Camera($1)'
+
+  'goDefaults dict':
+    'prefix': 'default'
+    'body': '''
+      default = {
+        "size": (0, 0),
+        "position": (0, 0),
+        "name": "Untitled",
+        "type": None,
+        "image": "noimage.png"
+      }$1
+    '''
