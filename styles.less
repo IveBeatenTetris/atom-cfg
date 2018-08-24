@@ -15,6 +15,95 @@
  * (To see them, uncomment and save)
  */
 
+/* ######################## PYTHON SYNTAX HIGHLIGHT ######################### */
+// standard colors
+.syntax--python{
+  color:#abb2bf;
+}
+
+// doctstrings & comments
+.syntax--python .syntax--block .syntax--begin,
+.syntax--python .syntax--block .syntax--end,
+.syntax--python .syntax--block,
+.syntax--python .syntax--comment,
+.syntax--python .syntax--comment .syntax--comment{
+  background-color:#565661;
+  color:#fff !important;
+}
+
+// docstring whitespace
+.syntax--python .leading-whitespace{
+  background-color:rgb(37, 41, 49) !important;
+}
+
+// keywords
+.syntax--python .syntax--keyword,
+.syntax--python .syntax--storage,
+.syntax--python .syntax--logical{
+  color:#6585bf !important;
+  font-style:italic;
+  font-weight:bold;
+}
+
+// classes & objects
+.syntax--python .syntax--class .syntax--name{
+  color:#d2a946 !important;
+}
+
+// functions
+.syntax--python .syntax--function .syntax--magic,
+.syntax--python .syntax--method-call .syntax--entity,
+.syntax--python .syntax--function-call .syntax--entity,
+.syntax--python .syntax--method-call .syntax--magic,
+.syntax--python .syntax--function-call .syntax--builtin{
+  color:none !important;
+}
+
+// variables and modules
+.syntax--python .syntax--language,
+.syntax--python .syntax--function .syntax--parameter,
+.syntax--python .syntax--function-call,
+.syntax--python .syntax--variable,
+.syntax--python .syntax--separator{
+  color:#abb2bf !important;
+}
+
+// constants
+.syntax--python .syntax--item-access{
+  color:#86593b;
+}
+
+// properties
+.syntax--python .syntax--property{
+  color:#e5c07b !important;
+}
+
+// strings
+.syntax--python .syntax--single-line .syntax--string,
+.syntax--python .syntax--single-line{
+  color:#787887 !important;
+  font-style:italic;
+}
+
+// integers
+.syntax--python .syntax--decimal{
+  color:#cf793f;
+  font-weight:bold;
+}
+
+// operators and symbols
+.syntax--python .syntax--list,
+.syntax--python .syntax--bracket,
+.syntax--python .syntax--operator .syntax--keyword,
+.syntax--python .syntax--separator,
+.syntax--python .syntax--dictionary .syntax--valuepair,
+.syntax--python .syntax--assignment,
+.syntax--python .syntax--punctuation{
+  color:#bbb7a8 !important;
+  font-weight:bold;
+}
+/* ########################################################################## */
+
 // style the background color of the tree view
 .tree-view {
   // background-color: whitesmoke;
@@ -45,77 +134,6 @@ atom-text-editor .line{
 /* code line highlight */
 .cursor-line{
   background-color: rgb(40, 50, 70) !important;
-}
-
-/* keywords */
-.syntax--storage,
-.syntax--keyword{
-  color: rgb(101, 133, 191) !important;
-  font-style: italic;
-  font-weight: bold;
-}
-/* integer */
-.syntax--constant.syntax--numeric{
-  //color:rgb(236, 167, 48);
-  color: rgb(207, 121, 63);
-}
-/* string */
-.syntax--string {
-  //color: rgb(207, 121, 63);
-  color: rgb(120, 120, 135);
-}
-/* variable */
-.syntax--variable {
-  color: rgb(255, 227, 132);
-}
-/* constant */
-.syntax--constant {
-  color: rgb(121, 85, 72);
-}
-/* parameter */
-.syntax--source.syntax--python .syntax--variable.syntax--parameter {
-  color: rgb(171, 178, 191);
-}
-/* whole function line */
-/*.syntax--python .syntax--function{
-  background-color:rgb(49, 58, 71) !important;
-}
-.syntax--python .syntax--name{
-  background-color:rgb(40, 44, 52) !important;
-}
-.syntax--function .syntax--name,{
-  background-color:rgb(49, 58, 71) !important;
-}
-.syntax--python .syntax--magic{
-  background-color:rgb(40, 44, 52) !important;
-}*/
-.syntax--python .syntax--function{
-  //background-color:rgb(49, 58, 71);
-}
-.syntax--python .syntax--entity{
-  background:none;
-}
-/* whole class line */
-.syntax--python .syntax--class{
-  //background-color: #313a47 !important;
-}
-/* docstrings and comments */
-//.syntax--line .syntax--python, .syntax--line
-.syntax--python .syntax--comment,
-.syntax--python .syntax--block .syntax--string,
-.syntax--python .syntax--block{
-  background-color:rgb(70, 75, 85) !important;
-  color:#fff !important;
-  font-style:normal !important;
-  font-family:"Lucida Console" !important;
-  font-size:0.9em;
-  line-height:0 !important;
-  padding:4px 0px 3px 0px!important;
-  margin:0px !important;
-}
-/* leading whitespace */
-.syntax--python .syntax--leading{
-  background-color:rgba(40, 44, 52, 0) !important;
 }
 
 .outline-view-core .outline-view-trees li.list-item.outline-view-item {
@@ -165,21 +183,14 @@ ul[is="atom-tabs"] li[is="tabs-tab"]{
   background: -webkit-linear-gradient(90deg, rgb(33,37,43), rgb(25,30,35));
 }
 
-/* docstring */
-.syntax--block .syntax--python,
-.syntax--block{
-  color: rgb(92, 99, 112);
-  font-style: italic;
-}
-
 .item-views{
   background: -webkit-linear-gradient(rgb(33,37,43), rgb(25,30,35));
 }
 
 /* text editor */
 atom-text-editor{
-  //background-color: rgb(40, 44, 52);
-  background: -webkit-linear-gradient(-90deg, rgb(33,37,43), rgb(40,44,52));
+  background-color: rgb(37, 41, 49);
+  //background: -webkit-linear-gradient(-90deg, rgb(33,37,43), rgb(40,44,52));
 }
 
 /* github */
