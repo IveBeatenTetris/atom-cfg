@@ -87,22 +87,30 @@
   font-style:italic;
 }
 
+// bools
+.syntax--python .syntax--value .syntax--language{
+  color:#9f4b47 !important;
+  font-style:italic;
+}
+
 // integers
 .syntax--python .syntax--decimal{
   color:#d28338;
-  font-weight:bold;
+  //font-weight:bold;
 }
 
 // operators and symbols
-.syntax--python .syntax--list,
+//.syntax--python .syntax--list .syntax--definition,
 .syntax--python .syntax--bracket,
 .syntax--python .syntax--operator .syntax--keyword,
 .syntax--python .syntax--separator,
 .syntax--python .syntax--dictionary .syntax--valuepair,
 .syntax--python .syntax--assignment,
 .syntax--python .syntax--punctuation,
-.syntax--python .syntax--arithmetic{
-  color:#bbb7a8 !important;
+.syntax--python .syntax--arithmetic,
+.syntax--python .syntax--function .syntax--meta,
+.syntax--python .syntax--comparison{
+  color:#455a81 !important;
   font-weight:bold;
 }
 /* ########################################################################## */
