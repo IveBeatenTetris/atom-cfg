@@ -41,20 +41,21 @@
   'go.Boilerplate':
     'prefix': 'boilerplate'
     'body': '''
+      # dependencies
       from libraries import pygo as go
 
       # assignments
       assets = go.AssetLoader()
       window = go.Window()
 
-      #------------------------------------------------------------------------------#
+      # --------------------------------------------------------------------------- #
       $1
-      #------------------------------------------------------------------------------#
+      # --------------------------------------------------------------------------- #
 
       # main loop
       while True:
       	# events
-      	window.getEvents()
+      	events = window.getEvents()
 
       	# updating
       	window.update()
@@ -70,13 +71,13 @@
     'body': 'window = go.Window($1)'
   'go.Player()':
     'prefix': 'player'
-    'body': 'player = go.Player({"track": player})$1'
+    'body': 'player = go.Player()$1'
   'go.Map()':
     'prefix': 'map'
     'body': 'map = go.Map(${1:config})$2'
   'go.Camera()':
     'prefix': 'camera'
-    'body': 'camera = go.Camera($1)'
+    'body': 'camera = go.Camera({"track": player}$1)'
   'go.Defaults dict':
     'prefix': 'default'
     'body': '''
@@ -91,3 +92,21 @@
   'go.utils.validateDict':
     'prefix': 'validateDict'
     'body': 'validateDict(${1:config}, ${2:default})$3'
+  'go.utils.perPixelAlpha':
+    'prefix': 'perPixelAlpha'
+    'body': 'perPixelAlpha(${1:surface}, ${2:opacity})$3'
+  'go.utils.cut':
+    'prefix': 'cut'
+    'body': 'cut(${1:surface}, ${2:rect})$3'
+  'go.utils.scale':
+    'prefix': 'scale'
+    'body': 'scale(${1:surface}, ${2:factor})$3'
+  'go.utils.draw':
+    'prefix': 'draw'
+    'body': 'draw(${1:target}, ${2:destination}, ${3:position})$4'
+  'go.utils.drawBorder':
+    'prefix': 'drawBorder'
+    'body': 'drawBorder(${1:surface}, ${2:rect}, ${3:border})$4'
+  'go.utils.getFrames':
+    'prefix': 'getFrames'
+    'body': 'getFrames(${1:surface}, ${2:tuple})$3'
