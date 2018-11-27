@@ -83,7 +83,8 @@
 
 // strings
 .syntax--python .syntax--single-line .syntax--string,
-.syntax--python .syntax--single-line{
+.syntax--python .syntax--single-line,
+span.syntax--string, .syntax--quoted{
   color:#787887 !important;
   font-style:italic;
 }
@@ -97,7 +98,8 @@
 }
 
 // integers
-.syntax--python .syntax--decimal{
+.syntax--python .syntax--decimal,
+.syntax--python .syntax--constant .syntax--language{
   color:#d28338;
   font-weight:normal;
 }
